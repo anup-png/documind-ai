@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+
+# Environment
+.env
+backend/.env
+frontend/.env
+
+# Uploaded files
+backend/uploads/
+
+# Chroma Vector DB
+backend/chroma_db/
+
+# IDE
+.vscode/
+.idea/
+
+# React
+frontend/node_modules/
+frontend/dist/
+
+# OS
+.DS_Store
+Thumbs.db
