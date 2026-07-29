@@ -15,6 +15,7 @@ class Settings(BaseSettings):
     # Google AI
     # ==========================
     GOOGLE_API_KEY: str
+    MISTRAL_API_KEY:str
 
     # ==========================
     # Database
