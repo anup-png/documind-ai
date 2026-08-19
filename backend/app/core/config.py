@@ -12,10 +12,17 @@ class Settings(BaseSettings):
     DEBUG: bool = True
 
     # ==========================
-    # Google AI
+    # Auth
+    # ==========================
+    JWT_SECRET_KEY: str
+    JWT_ALGORITHM: str = "HS256"
+    JWT_EXPIRE_MINUTES: int = 60 * 24  # 1 day
+
+    # ==========================
+    # AI Providers
     # ==========================
     GOOGLE_API_KEY: str
-    MISTRAL_API_KEY:str
+    MISTRAL_API_KEY: str
 
     # ==========================
     # Database
@@ -27,7 +34,14 @@ class Settings(BaseSettings):
     # ==========================
     CHROMA_DB: str = "./chroma_db"
 
-    FRONTEND_URL:str
+    # ==========================
+    # Cloudinary
+    # ==========================
+    CLOUDINARY_CLOUD_NAME: str
+    CLOUDINARY_API_KEY: str
+    CLOUDINARY_API_SECRET: str
+
+    FRONTEND_URL: str
 
     model_config = SettingsConfigDict(
         env_file=".env",

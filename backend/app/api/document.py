@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 from app.ai.loader import load_pdf
 from app.ai.splitter import split_documents
 from app.ai.vector_store import vector_store
-from app.core.dependencies import get_db
+from app.db.session import get_db
 from app.db.models.document import Document
 from app.schemas.document import DocumentResponse
 
