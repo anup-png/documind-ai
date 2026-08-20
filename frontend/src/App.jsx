@@ -5,12 +5,23 @@ import Chat from "./pages/Chat";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import PrivateRoute from "./components/PrivateRoute";
+import TestUpload from "./pages/TestUpload";
+
+
 
 function App() {
   return (
     <Routes>
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
+      <Route
+        path="/test-upload"
+        element={
+          <PrivateRoute>
+            <TestUpload />
+          </PrivateRoute>
+        }
+      />
       <Route
         path="/"
         element={
@@ -19,6 +30,7 @@ function App() {
           </PrivateRoute>
         }
       />
+
       <Route
         path="/documents/:documentId/chat"
         element={
